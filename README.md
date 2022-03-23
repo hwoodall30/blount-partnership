@@ -1,40 +1,28 @@
-# create-svelte
+# Blount Partnership Application
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## What to do after initially pulling down the application.
 
-## Creating a project
+> 1.  Ensure that `node.js` is installed on your system.
+> 2.  `cd` into the `blount-partnership` directory.
+> 3.  Run the following command: `npm install`.
+> 4.  To start the developement server locally run: `npm run dev`.
+> 5.  To build the application for production run: `npm run build`.
+> 6.  To preview the production versiono of the appliaction run: `npm run preview`.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Svelte specific items.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+> 1.  Svelte components are written as `.svelte` files.
+> 2.  Svelte components are compiled to `.js` files.
+> 3.  Svelte components are comprised of:
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> ```html
+> <script>
+> 	//Where all the styling for the specific component is written.
+> </script>
+>
+> <div>Where the html is written for the specific component.</div>
+>
+> <style>
+> 	/*Where all of the styling is written for the specific component (scoped only to this component).*/
+> </style>
+> ```
