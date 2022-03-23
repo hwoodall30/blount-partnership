@@ -4,7 +4,7 @@
 
 > 1.  Ensure that `node.js` is installed on your system.
 > 2.  `cd` into the `blount-partnership` directory.
-> 3.  Run the following command: `npm install`.
+> 3.  Run the following command: `npm install`. This will install the dependencies for the application from the package.json file.
 > 4.  To start the developement server locally run: `npm run dev`.
 > 5.  To build the application for production run: `npm run build`.
 > 6.  To preview the production version of the application run: `npm run preview`.
