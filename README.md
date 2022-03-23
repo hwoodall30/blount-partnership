@@ -7,7 +7,7 @@
 > 3.  Run the following command: `npm install`.
 > 4.  To start the developement server locally run: `npm run dev`.
 > 5.  To build the application for production run: `npm run build`.
-> 6.  To preview the production versiono of the appliaction run: `npm run preview`.
+> 6.  To preview the production version of the application run: `npm run preview`.
 
 ## Svelte specific items.
 
