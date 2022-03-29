@@ -18,14 +18,19 @@
 <div class="MainContent">
 	<div class="innerContent">
 		<div in:fly={{ y: 100 }} class="TopLeftContainer">
-			<div>
+			<div style="display: flex;flex-direction: column; align-items: flex-start">
 				The Blount Chamber, a nonpartisan organization, welcomes you to the voters resource page for Blount County
 				elections. Here, you can view profiles on the candidates running for office during the Blount County Primary and
 				Rockford City Election held May 3. In addition, you’ll find information on registering to vote, important dates,
-				finding your precinct and district and other information relating to Blount County elections in 2022.<br /> There
-				are two more elections this year on August 4 for the Federal and State Primary, County General, Friendsville and
-				Townsend City election and Nov. 8 for the Federal and State General, Alcoa, Louisville and Maryville City elections.
-				Take time to learn about the candidates and remember to exercise your right to vote.
+				finding your precinct and district and other information relating to Blount County elections in 2022.<br />
+				There are two more elections this year on August 4 for the Federal and State Primary, County General, Friendsville
+				and Townsend City election and Nov. 8 for the Federal and State General, Alcoa, Louisville and Maryville City elections.
+				Take time to learn about the candidates and remember to exercise your right to vote. Be sure to follow our
+				<a
+					target="_blank"
+					style="color: var(--text-grey); font-size: 16px;"
+					href="https://www.facebook.com/groups/votefactsblount">Vote Facts Blount Facebook group &#10148;</a
+				>
 			</div>
 		</div>
 		<div in:fly={{ y: 100, delay: 100 }} class="RightContainer">
@@ -139,8 +144,15 @@
 		font-size: 17px;
 		color: rgb(97, 97, 97);
 		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 		justify-content: flex-start;
 		align-items: center;
+	}
+
+	.TopLeftContainer a {
+		color: rgb(97, 97, 97);
+		text-decoration: none;
 	}
 
 	.RightContainer {
