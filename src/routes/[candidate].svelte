@@ -29,8 +29,8 @@
 				</div>
 				<div>
 					<b>Campaign Website</b>
-					{#if Candidate[0]?.Website}
-						<p>{Candidate[0]?.CampaignWebsite}</p>
+					{#if Candidate[0]?.CampaignWebsite}
+						<a href={Candidate[0].CampaignWebsite}>{Candidate[0]?.CampaignWebsite}</a>
 					{:else}
 						<p>None</p>
 					{/if}
@@ -44,7 +44,7 @@
 							</a>
 						{/if}
 						{#if Candidate[0]?.CampaignInstagram}
-							<a target="_blank" href="/">
+							<a target="_blank" href={Candidate[0]?.CampaignInstagram}>
 								<img width="30" height="30" src="/Images/VS__Insta_Logo.svg" alt="Instagram" />
 							</a>
 						{/if}
@@ -55,7 +55,7 @@
 						{/if}
 
 						{#if Candidate[0]?.CampaignLinkedIn}
-							<a target="_blank" href="/">
+							<a target="_blank" href={Candidate[0]?.CampaignLinkedIn}>
 								<img width="30" height="30" src="/Images/VS__LinkedIn_Logo.svg" alt="LinkedIn" />
 							</a>
 						{/if}
