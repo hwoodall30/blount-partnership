@@ -31,6 +31,9 @@
 					style="color: var(--text-grey); font-size: 16px;"
 					href="https://www.facebook.com/groups/votefactsblount">Vote Facts Blount Facebook group &#10148;</a
 				>
+				<a href="https://youtu.be/J3fPQM3W7sk" style="color: var(--text-grey); font-size: 16px;" target="_blank"
+					>Vote Facts Youtube &#10148;</a
+				>
 			</div>
 		</div>
 		<div in:fly={{ y: 100, delay: 100 }} class="RightContainer">
@@ -38,10 +41,6 @@
 				<div>
 					<h3>Important Dates</h3>
 					<div>
-						<div>
-							<b>April 4, 2022</b>
-							<p>Last Day to Register to Vote</p>
-						</div>
 						<div>
 							<b>April 13 - 28, 2022</b>
 							<p>Early Voting Period</p>
@@ -239,7 +238,7 @@
 		cursor: pointer;
 	}
 
-	@media only screen and (max-width: 1100px) {
+	@media only screen and (max-width: 1200px) {
 		.MainContent {
 			max-height: none;
 			height: auto;

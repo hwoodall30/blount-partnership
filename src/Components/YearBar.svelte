@@ -39,7 +39,7 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		font-size: clamp(20px, 4.3vw, 40px);
+		font-size: clamp(18px, 4.3vw, 40px);
 		max-width: 550px;
 		color: rgb(0, 0, 0);
 		letter-spacing: 0.04em;
