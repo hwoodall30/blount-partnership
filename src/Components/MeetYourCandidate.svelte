@@ -21,14 +21,6 @@
 		});
 		Candidates = data;
 
-		// let { data: dist, error: distError } = await supabase.from('Blount-Candidates').select('District');
-		// //filter unique values only from dist
-		// districts = dist
-		// 	.filter((v, i, a) => a.findIndex((t) => ['District'].every((k) => t[k] === v[k])) === i)
-		// 	.sort((a, b) => {
-		// 		return +a.District.localeCompare(b.District, undefined, { numeric: true });
-		// 	});
-
 		let { data: positionRunning, error: positionRunningError } = await supabase
 			.from('Blount-Candidates')
 			.select('PositionRunning');

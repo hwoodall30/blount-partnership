@@ -65,9 +65,14 @@
 					<b>Other Campaign Links</b>
 					{#if Candidate[0]?.OtherCampaignLinks}
 						{#each Candidate[0].OtherCampaignLinks.split(', ') as link}
-							<a href={link}>
-								<p style=" overflow-wrap: break-word; max-width: 93%">{link}</p>
-							</a>
+							{#if link[0] === '<'}
+								<div>{@html link}</div>
+							{/if}
+							{#if link[0] !== '<'}
+								<a href={link}>
+									<p style="overflow-wrap: break-word; max-width: 93%">{link}</p>
+								</a>
+							{/if}
 						{/each}
 					{:else}
 						<p>None</p>
