@@ -18,19 +18,21 @@
 <div class="MainContent">
 	<div class="innerContent">
 		<div in:fly={{ y: 100 }} class="TopLeftContainer">
-			<div style="display: flex;flex-direction: column; align-items: flex-start">
-				The Blount Chamber, a nonpartisan organization, welcomes you to the voters resource page for Blount County
-				elections. Here, you can view profiles on the candidates running for office during the Blount County Primary and
-				Rockford City Election held May 3. In addition, you’ll find information on registering to vote, important dates,
-				finding your precinct and district and other information relating to Blount County elections in 2022.<br />
-				There are two more elections this year on August 4 for the Federal and State Primary, County General, Friendsville
-				and Townsend City election and Nov. 8 for the Federal and State General, Alcoa, Louisville and Maryville City elections.
-				Take time to learn about the candidates and remember to exercise your right to vote. Be sure to follow our
-				<a
-					target="_blank"
-					style="color: var(--text-grey); font-size: 16px;"
-					href="https://www.facebook.com/groups/votefactsblount">Vote Facts Blount Facebook group &#10148;</a
-				>
+			<div style="display: flex; flex-direction: column; align-items: flex-start">
+				<div>
+					The Blount Chamber, a nonpartisan organization, welcomes you to the voters' resource page for Blount County
+					elections. Here, you can view profiles on the candidates running for office during the Federal & State
+					Primary, Blount County General, Friendsville and Townsend City elections. <br /> In addition, you'll find
+					information on registering to vote, important dates, finding your precinct and district and other information
+					relating to Blount County elections in 2022. <br /> There is one more election this year on Nov. 8 for the
+					Federal and State General, Alcoa, Louisville and Maryville City elections.<br /> Take time to learn about the
+					candidates and remember to exercise your right to vote. Be sure to follow our
+					<a
+						target="_blank"
+						style="color: var(--text-grey); font-size: 16px;"
+						href="https://www.facebook.com/groups/votefactsblount">Vote Facts Blount Facebook group &#10148;</a
+					>
+				</div>
 				<a href="https://youtu.be/J3fPQM3W7sk" style="color: var(--text-grey); font-size: 16px;" target="_blank"
 					>Vote Facts Youtube &#10148;</a
 				>
@@ -42,19 +44,19 @@
 					<h3>Important Dates</h3>
 					<div>
 						<div>
-							<b>April 13 - 28, 2022</b>
+							<b>July 5, 2022</b>
+							<p>Last Day to Register to Vote</p>
+						</div>
+						<div>
+							<b>July 15 - 30, 2022</b>
 							<p>Early Voting Period</p>
 							<a target="_blank" href="https://www.blounttn.org/477/Early-Voting">
 								<p>Early Voting Locations &#10148;</p>
 							</a>
 						</div>
 						<div>
-							<b>April 26, 2022</b>
-							<p>Last day to request an absentee by mail ballot</p>
-						</div>
-						<div>
-							<b>May 3, 2022</b>
-							<p>County Primary & Rockford City Election</p>
+							<b>July 28, 2022</b>
+							<p>Last Day to Request an Absentee by Mail Ballot Request</p>
 						</div>
 						<div>
 							<b>August 4, 2022</b>
@@ -135,7 +137,7 @@
 		align-items: center;
 	}
 
-	.TopLeftContainer div {
+	.TopLeftContainer > div {
 		width: 100%;
 		min-width: 300px;
 		height: 80%;
