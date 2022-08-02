@@ -44,23 +44,24 @@
 					<h3>Important Dates</h3>
 					<div>
 						<div>
-							<b>July 5, 2022</b>
+							<b>August 4, 2022</b>
+							<p>Federal & State Primary, County General, Friendsville, and Townsend City Election</p>
+						</div>
+						<div>
+							<b>August 10 - November 1, 2022</b>
+							<p>Request an Absentee By-Mail Ballot</p>
+						</div>
+						<div>
+							<b>October 11, 2022</b>
 							<p>Last Day to Register to Vote</p>
 						</div>
 						<div>
-							<b>July 15 - 30, 2022</b>
-							<p>Early Voting Period</p>
-							<a target="_blank" href="https://www.blounttn.org/477/Early-Voting">
-								<p>Early Voting Locations &#10148;</p>
-							</a>
-						</div>
-						<div>
-							<b>July 28, 2022</b>
-							<p>Last Day to Request an Absentee by Mail Ballot Request</p>
-						</div>
-						<div>
-							<b>August 4, 2022</b>
-							<p>Federal & State Primary, County General, Friendsville, and Townsend City Election</p>
+							<b>October 19 - November 3</b>
+							<p>
+								<a target="_blank" href="http://https://www.blounttn.org/477/Early-Voting"
+									>Early Voting Period &#10148;</a
+								>
+							</p>
 						</div>
 						<div>
 							<b>November 8, 2022</b>
@@ -214,6 +215,7 @@
 
 	.RightContainer > div > div > div a {
 		text-decoration: none;
+		color: grey;
 	}
 
 	b {
