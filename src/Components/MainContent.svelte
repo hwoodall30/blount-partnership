@@ -44,10 +44,6 @@
 					<h3>Important Dates</h3>
 					<div>
 						<div>
-							<b>August 4, 2022</b>
-							<p>Federal & State Primary, County General, Friendsville, and Townsend City Election</p>
-						</div>
-						<div>
 							<b>August 10 - November 1, 2022</b>
 							<p>Request an Absentee By-Mail Ballot</p>
 						</div>
