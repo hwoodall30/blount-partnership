@@ -3,7 +3,7 @@
 
 <footer>
 	<div class="innerContainer">
-		<div id="FooterText">&copy; 2022, Blount Partnership</div>
+		<div id="FooterText">&copy; 2024, Blount Partnership</div>
 		<a target="_blank" href="http://www.visualvoice.design"><div class="VisualVoice">Powered By: Visual Voice</div></a>
 		<div id="FooterIcons">
 			<a target="_blank" href="https://www.facebook.com/blountchamber">

@@ -3,7 +3,7 @@
 
 <div class="YearBar">
 	<div class="innerContent">
-		<div class="LeftColumn">2022</div>
+		<div class="LeftColumn">2024</div>
 		<div class="RightColumn">Blount County Elections Voter Resources</div>
 	</div>
 </div>
