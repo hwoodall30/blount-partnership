@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/env';
 
-	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 
 	function scrollToElement(id) {
@@ -21,12 +20,13 @@
 			<div style="display: flex; flex-direction: column; align-items: flex-start">
 				<div>
 					The Blount Chamber, a nonpartisan organization, welcomes you to the voters' resource page for Blount County
-					elections. Here, you can view profiles on the candidates running for office during the Federal & State
-					Primary, Blount County General, Friendsville and Townsend City elections. <br /> In addition, you'll find
-					information on registering to vote, important dates, finding your precinct and district and other information
-					relating to Blount County elections in 2022. <br /> There is one more election this year on Nov. 8 for the
-					Federal and State General, Alcoa, Louisville and Maryville City elections.<br /> Take time to learn about the
-					candidates and remember to exercise your right to vote. Be sure to follow our
+					elections. Here, you can view profiles on the candidates running for office during the presidential preference
+					primary, county property assessor primary, county school board primary and Rockford City Commission election. <br
+					/>
+					In addition, you'll find information on registering to vote, important dates, finding your precinct and district
+					and other information relating to Blount County elections in 2024. <br /> There are three election dates this
+					year on March 5, August 1 and November 5 for the Federal, State and municipal elections.<br />
+					Take time to learn about the candidates and remember to exercise your right to vote. Be sure to follow our
 					<a
 						target="_blank"
 						style="color: var(--text-grey); font-size: 16px;"
@@ -44,33 +44,26 @@
 					<h3>Important Dates</h3>
 					<div>
 						<div>
-							<b>August 10 - November 1, 2022</b>
-							<p>Request an Absentee By-Mail Ballot</p>
-						</div>
-						<div>
-							<b>October 11, 2022</b>
-							<p>Last Day to Register to Vote</p>
-						</div>
-						<div>
-							<b>October 19 - November 3</b>
-							<p>
-								<a target="_blank" href="http://https://www.blounttn.org/477/Early-Voting"
-									>Early Voting Period &#10148;</a
-								>
-							</p>
-						</div>
-						<div>
-							<b>November 8, 2022</b>
-							<p>Federal & State General, Alcoa, Louisville, and Maryville City Election</p>
+							<b>February 14 - February 27, 2024</b>
+							<p>Early Voting</p>
+							<p>* All early voting locations will be closed on February 19 in observance of President's Day.</p>
+							<a target="_blank" href="https://www.blounttn.org/477/Early-Voting">Early Voting Locations &#10148;</a>
 						</div>
 					</div>
 				</div>
 				<div>
-					<h3>More Dates</h3>
+					<h3>Election Day</h3>
 					<div>
-						<a target="_blank" href="https://www.blounttn.org/479/Election-Calendar"
-							><p>Click for more info &#10148;</p></a
-						>
+						<div>
+							<b>March 5, 2024</b>
+							<p>Polls open at 8:00 a.m. - 8:00 p.m.</p>
+							<a target="_blank" href="https://tnmap.tn.gov/voterlookup/"
+								><p>Vote at your assigned precinct &#10148;</p></a
+							>
+							<a target="_blank" href="http://sos.tn.gov/products/elections/what-id-required-when-voting"
+								><p>You must present a valid ID to vote. For more information, click here &#10148;</p></a
+							>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -200,13 +193,13 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: flex-start;
-		gap: 10px;
+		gap: 20px;
 	}
 
 	.RightContainer > div > div > div > div {
 		display: flex;
 		flex-direction: column;
-		gap: 3px;
+		gap: 15px;
 	}
 
 	.RightContainer > div > div > div a {
