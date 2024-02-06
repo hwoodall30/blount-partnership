@@ -163,11 +163,6 @@
 		font-size: clamp(0.8rem, 0.8vw, 1.1rem);
 	}
 
-	.Card div a {
-		color: var(--primary-orange);
-		text-decoration: none;
-	}
-
 	#PrecinctSelect {
 		position: absolute;
 		top: 50px;
@@ -182,11 +177,6 @@
 	select {
 		font-weight: 42px;
 		max-width: 250px;
-	}
-
-	a {
-		text-decoration: none;
-		color: black;
 	}
 
 	@media only screen and (max-width: 1100px) {
