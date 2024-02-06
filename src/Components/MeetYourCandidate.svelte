@@ -50,17 +50,17 @@
 	<p class="Title">Meet Your Candidates</p>
 	<div class="CardContainer">
 		{#each filteredCandidates as candidate (candidate.id)}
-			<a animate:flip={{ duration: 1000 }} href={`${candidate.FullName}`}>
+			<div animate:flip={{ duration: 1000 }}>
 				<div transition:fly|local={{ y: 200 }} class="Card">
 					<!-- <img src={candidate?.Photo} alt="CandidatePhoto" /> -->
 					<div id="CardImage" style="background-image: url('{candidate.Photo}'); width: 190px; height: 240px" />
 					<div class="CardText">
 						<p class="Name"><b>Candidate: </b>{candidate.FullName}</p>
 						<p class="Office"><b>Office Sought: </b>{candidate.PositionRunning}</p>
-						<a style="font-size: clamp(14px, 2vw, 18px);" href={`${candidate.FullName}`}>Learn More &#10148;</a>
+						<!-- <a style="font-size: clamp(14px, 2vw, 18px);" href={`${candidate.FullName}`}>Learn More &#10148;</a> -->
 					</div>
 				</div>
-			</a>
+			</div>
 		{/each}
 	</div>
 
@@ -134,7 +134,6 @@
 		display: flex;
 		gap: 15px;
 		transition: all 0.2s ease;
-		cursor: pointer;
 		height: 240px;
 	}
 
@@ -164,11 +163,6 @@
 		font-size: clamp(0.8rem, 0.8vw, 1.1rem);
 	}
 
-	.Card div a {
-		color: var(--primary-orange);
-		text-decoration: none;
-	}
-
 	#PrecinctSelect {
 		position: absolute;
 		top: 50px;
@@ -183,11 +177,6 @@
 	select {
 		font-weight: 42px;
 		max-width: 250px;
-	}
-
-	a {
-		text-decoration: none;
-		color: black;
 	}
 
 	@media only screen and (max-width: 1100px) {
