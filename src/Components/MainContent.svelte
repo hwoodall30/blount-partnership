@@ -26,16 +26,8 @@
 					In addition, you'll find information on registering to vote, important dates, finding your precinct and district
 					and other information relating to Blount County elections in 2024. <br /> There are three election dates this
 					year on March 5, August 1 and November 5 for the Federal, State and municipal elections.<br />
-					Take time to learn about the candidates and remember to exercise your right to vote. Be sure to follow our
-					<a
-						target="_blank"
-						style="color: var(--text-grey); font-size: 16px;"
-						href="https://www.facebook.com/groups/votefactsblount">Vote Facts Blount Facebook group &#10148;</a
-					>
+					Take time to learn about the candidates and remember to exercise your right to vote.
 				</div>
-				<a href="https://youtu.be/J3fPQM3W7sk" style="color: var(--text-grey); font-size: 16px;" target="_blank"
-					>Vote Facts Youtube &#10148;</a
-				>
 			</div>
 		</div>
 		<div in:fly={{ y: 100, delay: 100 }} class="RightContainer">
