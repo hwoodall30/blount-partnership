@@ -58,7 +58,7 @@
 						<p class="Name"><b>Candidate: </b>{candidate.FullName}</p>
 						<p class="Office"><b>Office Sought: </b>{candidate.PositionRunning}</p>
 						{#if candidate.video}
-							<a style="font-size: clamp(14px, 2vw, 18px);" href={`${candidate.video}`}>Watch Video &#10148;</a>
+							<a class="VideoLink" target="_blank" href={`${candidate.video}`}>See Video &#10148;</a>
 						{/if}
 					</div>
 				</div>
@@ -163,6 +163,12 @@
 		display: flex;
 		flex-direction: column;
 		font-size: clamp(0.8rem, 0.8vw, 1.1rem);
+	}
+
+	.VideoLink {
+		text-decoration: none;
+		color: var(--primary-orange);
+		font-weight: 500;
 	}
 
 	#PrecinctSelect {
