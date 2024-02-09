@@ -57,7 +57,9 @@
 					<div class="CardText">
 						<p class="Name"><b>Candidate: </b>{candidate.FullName}</p>
 						<p class="Office"><b>Office Sought: </b>{candidate.PositionRunning}</p>
-						<!-- <a style="font-size: clamp(14px, 2vw, 18px);" href={`${candidate.FullName}`}>Learn More &#10148;</a> -->
+						{#if candidate.video}
+							<a style="font-size: clamp(14px, 2vw, 18px);" href={`${candidate.video}`}>Watch Video &#10148;</a>
+						{/if}
 					</div>
 				</div>
 			</div>
