@@ -23,7 +23,8 @@
 
 		let { data: positionRunning, error: positionRunningError } = await supabase
 			.from('Blount-Candidates')
-			.select('PositionRunning');
+			.select('PositionRunning')
+			.eq('active', true);
 		PositionRunning = positionRunning
 			.filter((v, i, a) => a.findIndex((t) => ['PositionRunning'].every((k) => t[k] === v[k])) === i)
 			.sort((a, b) => {
@@ -59,6 +60,9 @@
 						<p class="Office"><b>Office Sought: </b>{candidate.PositionRunning}</p>
 						{#if candidate.video}
 							<a class="VideoLink" target="_blank" href={`${candidate.video}`}>See Video &#10148;</a>
+						{/if}
+						{#if candidate.CampaignWebsite}
+							<a class="WebsiteLink" target="_blank" href={`${candidate.CampaignWebsite}`}>Visit Website &#10148;</a>
 						{/if}
 					</div>
 				</div>
@@ -166,6 +170,12 @@
 	}
 
 	.VideoLink {
+		text-decoration: none;
+		color: var(--primary-orange);
+		font-weight: 500;
+	}
+
+	.Card a {
 		text-decoration: none;
 		color: var(--primary-orange);
 		font-weight: 500;
