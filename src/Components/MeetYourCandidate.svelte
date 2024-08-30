@@ -10,7 +10,7 @@
 	let PositionRunning = [];
 	let selectedPosition;
 	onMount(async () => {
-		let { data, error } = await supabase.from('Blount-Candidates').select('*');
+		let { data, error } = await supabase.from('Blount-Candidates').select('*').eq('active', true);
 		data.sort((a, b) => {
 			return (
 				a.PositionRunning.localeCompare(b.PositionRunning) ||
