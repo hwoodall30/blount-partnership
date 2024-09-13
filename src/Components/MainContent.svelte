@@ -95,7 +95,7 @@
 		justify-content: center;
 		align-items: center;
 		padding-bottom: 75px;
-		height: clamp(900px, 105vh, 1100px);
+		height: clamp(970px, 105vh, 1100px);
 	}
 
 	.innerContent {
