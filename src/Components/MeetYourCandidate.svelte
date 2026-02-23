@@ -1,36 +1,21 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
+	import candidates from '../lib/data/candidates.json';
 	import { flip } from 'svelte/animate';
+	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import { supabase } from '../Utils/supabaseClient';
 
-	let Candidates = [];
-	// let Photos = [];
-	// let districts = [];
+	let Candidates = candidates.filter((candidate) => candidate.active === true);
 	let PositionRunning = [];
-	let selectedPosition;
-	onMount(async () => {
-		let { data, error } = await supabase.from('Blount-Candidates').select('*').eq('active', true);
-		data.sort((a, b) => {
-			return (
-				a.PositionRunning.localeCompare(b.PositionRunning) ||
-				b.FullName.toLowerCase().includes('incumbent'.toLowerCase()) -
-					a.FullName.toLowerCase().includes('incumbent'.toLowerCase()) ||
-				a.FullName.localeCompare(b.FullName)
-			);
-		});
-		Candidates = data;
+	let selectedPosition = 'All';
 
-		let { data: positionRunning, error: positionRunningError } = await supabase
-			.from('Blount-Candidates')
-			.select('PositionRunning')
-			.eq('active', true);
-		PositionRunning = positionRunning
-			.filter((v, i, a) => a.findIndex((t) => ['PositionRunning'].every((k) => t[k] === v[k])) === i)
-			.sort((a, b) => {
-				return a.PositionRunning.localeCompare(b.PositionRunning);
-			});
+	onMount(() => {
 		selectedPosition = sessionStorage.getItem('selectedPosition') || 'All';
+	});
+
+	$: PositionRunning = Candidates.filter(
+		(v, i, a) => a.findIndex((t) => ['PositionRunning'].every((k) => t[k] === v[k])) === i
+	).sort((a, b) => {
+		return a.PositionRunning.localeCompare(b.PositionRunning);
 	});
 
 	$: filteredCandidates = Candidates.filter((candidate) => {
@@ -84,7 +69,6 @@
 <style>
 	.MeetYourCandidate {
 		width: 100%;
-		min-height: 93vh;
 		position: relative;
 		display: flex;
 		flex-direction: column;
