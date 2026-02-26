@@ -35,14 +35,19 @@
 <div class="MeetYourCandidate" id="MeetYourCandidate">
 	<p class="Title">Meet Your Candidates</p>
 	<div class="CardContainer">
-		{#each filteredCandidates as candidate (candidate.id)}
+		{#each [...new Map(filteredCandidates.map((c) => [c.FullName, c])).values()] as candidate (candidate.id)}
 			<div animate:flip={{ duration: 1000 }}>
 				<div transition:fly|local={{ y: 200 }} class="Card">
 					<!-- <img src={candidate?.Photo} alt="CandidatePhoto" /> -->
 					<div id="CardImage" style="background-image: url('{candidate.Photo}'); width: 190px; height: 240px" />
 					<div class="CardText">
 						<p class="Name"><b>Candidate: </b>{candidate.FullName}</p>
-						<p class="Office"><b>Office Sought: </b>{candidate.PositionRunning}</p>
+						<p class="Office">
+							<b>Office Sought: </b>{candidates
+								.filter((c) => c.FullName === candidate.FullName)
+								.map((c) => c.PositionRunning)
+								.join(' | ')}
+						</p>
 						{#if candidate.video}
 							<a class="VideoLink" target="_blank" href={`${candidate.video}`}>See Video &#10148;</a>
 						{/if}
