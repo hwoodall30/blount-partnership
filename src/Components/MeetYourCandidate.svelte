@@ -4,11 +4,14 @@
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
-	let Candidates = candidates.filter((candidate) => candidate.active === true);
+	let Candidates = [];
 	let PositionRunning = [];
 	let selectedPosition = 'All';
 
-	onMount(() => {
+	onMount(async () => {
+		const res = await fetch('https://hwoodall30.github.io/blount-partnership/src/lib/data/candidates.json');
+		const json = await res.json();
+		Candidates = json.filter((candidate) => candidate.active === true);
 		selectedPosition = sessionStorage.getItem('selectedPosition') || 'All';
 	});
 
