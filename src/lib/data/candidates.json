@@ -101,7 +101,7 @@
 		"District": null,
 		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Pic Placeholder_female.svg",
 		"video": null,
-		"active": true
+		"active": false
 	},
 	{
 		"id": 5,
@@ -671,7 +671,7 @@
 		"Browser": null,
 		"IP Address": null,
 		"District": "4",
-		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Pic Placeholder_male.svg",
+		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Candidates/Cox-Robin.jpg",
 		"video": null,
 		"active": true
 	},
@@ -1436,7 +1436,7 @@
 		"Phone": null,
 		"Email": null,
 		"PositionRunning": "County Commission District-10, Seat A",
-		"CampaignWebsite": null,
+		"CampaignWebsite": "https://www.facebook.com/profile.php?id=61588264241281",
 		"CampaignFacebook": null,
 		"CampaignInstagram": null,
 		"CampaignTwitter": null,
@@ -1451,7 +1451,7 @@
 		"Browser": null,
 		"IP Address": null,
 		"District": "10",
-		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Pic Placeholder_male.svg",
+		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Candidates/Moore-Doug.jpg",
 		"video": null,
 		"active": true
 	},
@@ -1670,7 +1670,7 @@
 		"Phone": null,
 		"Email": null,
 		"PositionRunning": "County School Board, District 1",
-		"CampaignWebsite": null,
+		"CampaignWebsite": "https://www.facebook.com/profile.php?id=61587996197916",
 		"CampaignFacebook": null,
 		"CampaignInstagram": null,
 		"CampaignTwitter": null,
@@ -1685,7 +1685,7 @@
 		"Browser": null,
 		"IP Address": null,
 		"District": "1",
-		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Pic Placeholder_male.svg",
+		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Candidates/Young-Phil.jpg",
 		"video": null,
 		"active": true
 	},
@@ -1711,7 +1711,7 @@
 		"Browser": null,
 		"IP Address": null,
 		"District": "1",
-		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Pic Placeholder_male.svg",
+		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Candidates/King-Brian.jpg",
 		"video": null,
 		"active": true
 	},
@@ -2154,6 +2154,32 @@
 		"IP Address": null,
 		"District": null,
 		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Candidates/Berrong-James Lee.png",
+		"video": null,
+		"active": true
+	},
+	{
+		"id": 101,
+		"Added": null,
+		"FullName": "John Craw (R)",
+		"Phone": null,
+		"Email": null,
+		"PositionRunning": "County Commission District 2, Seat B",
+		"CampaignWebsite": null,
+		"CampaignFacebook": null,
+		"CampaignInstagram": null,
+		"CampaignTwitter": null,
+		"OtherCampaignLinks": null,
+		"answer-one": null,
+		"answer-two": null,
+		"answer-three": null,
+		"answer-four": null,
+		"answer-five": null,
+		"answer-six": null,
+		"answer-seven": null,
+		"Browser": null,
+		"IP Address": null,
+		"District": null,
+		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Pic Placeholder_male.svg",
 		"video": null,
 		"active": true
 	}
