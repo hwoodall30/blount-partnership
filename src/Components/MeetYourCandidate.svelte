@@ -1,5 +1,4 @@
 <script lang="ts">
-	import candidates from '../lib/data/candidates.json';
 	import { flip } from 'svelte/animate';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
@@ -46,10 +45,7 @@
 					<div class="CardText">
 						<p class="Name"><b>Candidate: </b>{candidate.FullName}</p>
 						<p class="Office">
-							<b>Office Sought: </b>{candidates
-								.filter((c) => c.FullName === candidate.FullName)
-								.map((c) => c.PositionRunning)
-								.join(' | ')}
+							<b>Office Sought: </b>{candidate.PositionRunning}
 						</p>
 						{#if candidate.video}
 							<a class="VideoLink" target="_blank" href={`${candidate.video}`}>See Video &#10148;</a>
