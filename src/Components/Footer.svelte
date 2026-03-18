@@ -6,7 +6,7 @@
 		<div id="FooterText">&copy; {new Date().getFullYear()}, Blount Partnership</div>
 		<a target="_blank" href="http://www.visualvoice.design"><div class="VisualVoice">Powered By: Visual Voice</div></a>
 		<div id="FooterIcons">
-			<a target="_blank" href="https://www.facebook.com/blountchamber">
+			<a target="_blank" href="https://www.facebook.com/blountpartnership">
 				<img src="/Images/VS__FaceBook_Logo.svg" alt="Facebook" />
 			</a>
 			<a target="_blank" href="https://www.instagram.com/blountchamber/">
