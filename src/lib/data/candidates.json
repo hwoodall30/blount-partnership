@@ -110,7 +110,7 @@
 		"Phone": null,
 		"Email": null,
 		"PositionRunning": "County Clerk",
-		"CampaignWebsite": null,
+		"CampaignWebsite": "https://www.facebook.com/ShelbyShanklandCountyClerk",
 		"CampaignFacebook": null,
 		"CampaignInstagram": null,
 		"CampaignTwitter": null,
@@ -125,7 +125,7 @@
 		"Browser": null,
 		"IP Address": null,
 		"District": null,
-		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Candidates/Shankland-Shelby.jpg",
+		"Photo": "https://hwoodall30.github.io/blount-partnership/static/Images/Candidates/Shankland-Shelby.jpeg",
 		"video": null,
 		"active": true
 	},
