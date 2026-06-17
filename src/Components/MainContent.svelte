@@ -30,7 +30,7 @@
 		}
 	});
 
-	function scrollToElement(id) {
+	function scrollToElement(id: string) {
 		if (browser) {
 			document.getElementById(id)?.scrollIntoView({
 				behavior: 'smooth',
@@ -80,10 +80,14 @@
 						<div>
 							{#each content?.important_dates || [] as d}
 								<div>
-									<b>{d.date}</b>
-									<p>{d.description}</p>
+									{#if d.date}
+										<b>{d.date}</b>
+									{/if}
+									{#if d.description}
+										<p>{d.description}</p>
+									{/if}
 									{#if d.link}
-										<a target="_blank" href={d.link}>{d.link_title}</a>
+										<a target="_blank" href={d.link}>{d?.link_title || ''}</a>
 									{/if}
 								</div>
 							{/each}
