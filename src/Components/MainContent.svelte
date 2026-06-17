@@ -1,12 +1,34 @@
 <script lang="ts">
 	import { browser } from '$app/env';
-
+	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	// import content from '../lib/data/content.json';
+
+	/**  @type {typeof import('../lib/data/content.json')} */
+	let content;
+	let loading = true;
+	let error = false;
+
+	onMount(async () => {
+		try {
+			loading = true;
+
+			const res = await fetch('https://hwoodall30.github.io/blount-partnership/src/lib/data/content.json');
+			if (!res.ok) throw new Error('Network response was not ok');
+			const json = await res.json();
+
+			content = json;
+		} catch (e) {
+			error = true;
+			console.error(e);
+		} finally {
+			loading = false;
+		}
+	});
 
 	function scrollToElement(id) {
 		if (browser) {
-			const scrollToElement = document.getElementById(id);
-			scrollToElement.scrollIntoView({
+			document.getElementById(id)?.scrollIntoView({
 				behavior: 'smooth',
 				block: 'start'
 			});
@@ -15,71 +37,87 @@
 </script>
 
 <div class="MainContent">
-	<div class="innerContent">
-		<div in:fly={{ y: 100 }} class="TopLeftContainer">
-			<div style="display: flex; flex-direction: column; align-items: flex-start">
-				<div>
-					The Blount Chamber, a nonpartisan organization, welcomes you to the voters' resource page for Blount County
-					elections. Here, you can view the candidates running for office during May 5 primary for all county positions,
-					county school board districts 1, 3, 5, 7, and Rockford City Commission.
-					<br /> <br />
-					In addition, you'll find information on registering to vote, important dates, finding your precinct and district
-					and other information relating to Blount County elections in {new Date().getFullYear()}.
-					<br /> <br />
-					Take time to learn about the candidates and remember to exercise your right to vote.
-				</div>
-			</div>
+	{#if loading}
+		<div class="Spinner" />
+	{:else if error}
+		<div class="Error">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="40"
+				height="40"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.5"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<circle cx="12" cy="12" r="10" />
+				<line x1="12" y1="8" x2="12" y2="12" />
+				<line x1="12" y1="16" x2="12.01" y2="16" />
+			</svg>
+			<p>Unable to load content</p>
+			<span>Please check your connection and try again.</span>
+			<button on:click={() => window.location.reload()}>Retry</button>
 		</div>
-		<div in:fly={{ y: 100, delay: 100 }} class="RightContainer">
-			<div>
-				<div>
-					<h3>Important Dates</h3>
+	{:else}
+		<div class="innerContent">
+			<div in:fly={{ y: 100 }} class="TopLeftContainer">
+				<div style="display: flex; flex-direction: column; align-items: flex-start">
 					<div>
-						<div>
-							<b>April 6, 2026</b>
-							<p>Last day to register to vote for the May 5 primary.</p>
-							<a target="_blank" href="https://www.blounttn.gov/777/Register-to-Vote-Update-Information"
-								>Register here &#10148;</a
-							>
-						</div>
-						<div>
-							<b>April 15-30, 2026</b>
-							<a target="_blank" href="https://www.blounttn.org/477/Early-Voting">Early Voting Locations &#10148;</a>
-						</div>
-					</div>
-				</div>
-				<div>
-					<h3>Election Day</h3>
-					<div>
-						<div>
-							<b>May 5, 2026</b>
-							<a target="_blank" href="https://tnmap.tn.gov/voterlookup/"><p>Vote at your precinct &#10148;</p></a>
-							<a target="_blank" href="http://sos.tn.gov/products/elections/what-id-required-when-voting"
-								><p>You must present a valid ID to vote. For more information, click here &#10148;</p></a
-							>
-						</div>
+						{@html (content?.main_content || '')?.replace(/\n\n/g, '<br><br>')}
 					</div>
 				</div>
 			</div>
+			<div in:fly={{ y: 100, delay: 100 }} class="RightContainer">
+				<div>
+					<div>
+						<h3>Important Dates</h3>
+						<div>
+							{#each content?.important_dates || [] as d}
+								<div>
+									<b>{d.date}</b>
+									<p>{d.description}</p>
+									{#if d.link}
+										<a target="_blank" href={d.link}>{d.link_title}</a>
+									{/if}
+								</div>
+							{/each}
+						</div>
+					</div>
+					<div>
+						<h3>Election Day</h3>
+						<div>
+							<div>
+								<b>{content?.election_day || ''}</b>
+								<a target="_blank" href="https://tnmap.tn.gov/voterlookup/"><p>Vote at your precinct &#10148;</p></a>
+								<a target="_blank" href="http://sos.tn.gov/products/elections/what-id-required-when-voting"
+									><p>You must present a valid ID to vote. For more information, click here &#10148;</p></a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="CardContainer">
+				<a href="/">
+					<img
+						on:click={() => scrollToElement('MeetYourCandidate')}
+						src={'Images/VS__MeetYourCand_Btn.svg'}
+						alt=""
+						width="170"
+						in:fly={{ y: 100 }}
+					/>
+				</a>
+				<a target="_blank" href="https://www.blounttn.org/777/Register-to-Vote-Update-Information">
+					<img in:fly={{ y: 100, delay: 100 }} src={'Images/VS__RegToVote_Btn.svg'} alt="" width="170" />
+				</a>
+				<a target="_blank" href="https://www.blounttn.org/792/Maps">
+					<img in:fly={{ y: 100, delay: 200 }} src={'Images/VS__FindYourPrec_Btn.svg'} alt="" width="170" />
+				</a>
+			</div>
 		</div>
-		<div class="CardContainer">
-			<a href="/">
-				<img
-					on:click={() => scrollToElement('MeetYourCandidate')}
-					src={'Images/VS__MeetYourCand_Btn.svg'}
-					alt=""
-					width="170"
-					in:fly={{ y: 100 }}
-				/>
-			</a>
-			<a target="_blank" href="https://www.blounttn.org/777/Register-to-Vote-Update-Information">
-				<img in:fly={{ y: 100, delay: 100 }} src={'Images/VS__RegToVote_Btn.svg'} alt="" width="170" />
-			</a>
-			<a target="_blank" href="https://www.blounttn.org/792/Maps">
-				<img in:fly={{ y: 100, delay: 200 }} src={'Images/VS__FindYourPrec_Btn.svg'} alt="" width="170" />
-			</a>
-		</div>
-	</div>
+	{/if}
 </div>
 
 <style>
@@ -261,6 +299,58 @@
 
 		.CardContainer img {
 			width: clamp(70px, 20vw, 280px);
+		}
+	}
+
+	.Error {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		color: var(--primary-orange);
+	}
+
+	.Error p {
+		margin: 0;
+		font-size: 18px;
+		font-weight: 600;
+		color: rgb(90, 90, 90);
+	}
+
+	.Error span {
+		font-size: 14px;
+		color: rgb(150, 150, 150);
+	}
+
+	.Error button {
+		margin-top: 8px;
+		padding: 8px 24px;
+		border: 1.5px solid var(--primary-orange);
+		border-radius: 4px;
+		background: transparent;
+		color: var(--primary-orange);
+		font-size: 14px;
+		cursor: pointer;
+		transition: background 0.2s, color 0.2s;
+	}
+
+	.Error button:hover {
+		background: var(--primary-orange);
+		color: white;
+	}
+
+	.Spinner {
+		width: 48px;
+		height: 48px;
+		border: 4px solid rgba(179, 116, 61, 0.2);
+		border-top-color: var(--primary-orange);
+		border-radius: 50%;
+		animation: spin 0.8s linear infinite;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
 		}
 	}
 </style>
