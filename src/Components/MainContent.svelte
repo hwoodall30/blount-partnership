@@ -2,10 +2,14 @@
 	import { browser } from '$app/env';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	// import content from '../lib/data/content.json';
 
-	/**  @type {typeof import('../lib/data/content.json')} */
-	let content;
+	type Content = {
+		main_content: string;
+		important_dates: { date: string; description: string; link_title: string; link: string }[];
+		election_day: string;
+	};
+
+	let content: Content | undefined;
 	let loading = true;
 	let error = false;
 
