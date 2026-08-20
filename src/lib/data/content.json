@@ -1,18 +1,18 @@
 {
-	"main_content": "The Blount Chamber, a nonpartisan organization, welcomes you to the voters' resource page for Blount County elections. Here, you can view the candidates running for office during August 6 election. This includes federal/state primary for governor, U.S. Senator, U.S. House of Representatives, State Executive Committeeman. Municipal primary for Alcoa and Maryville City School Board. General election for all county offices and commission along with county school board districts 1, 3, 5, 7. Municipal election for Friendsville and Townsend City Commissions.\n\nIn addition, you'll find information on registering to vote, important dates, finding your precinct and district and other information relating to Blount County elections in 2026.\n\nTake time to learn about the candidates and remember to exercise your right to vote.",
+	"main_content": "The Blount Chamber, a nonpartisan organization, welcomes you to the voters' resource page for Blount County elections. Here, you can view the candidates running for office during the November 3 election. This includes federal/state general election for governor, U.S. Senator, U.S. House of Representatives (District 2), TN House of Representatives (District 8 and 20), State Executive Committeeman (1 Republican and 1 Democrat), State Executive Committeewoman (1 Republican and 1 Democrat). Municipal general election is being held for Alcoa City Council (3 seats), Alcoa City School Board (3 seats), Louisville City Mayor, Louisville City Alderman (2 seats), Maryville City Council (3 seats), Maryville City School Board (3 seats).",
 	"important_dates": [
 		{
-			"date": "July 7, 2026",
-			"description": "Last day to register to vote for the August 6 election",
+			"date": "October 5, 2026",
+			"description": "Last day to register to vote for the November 3 election.",
 			"link_title": "Register here ➤",
 			"link": "https://www.blounttn.gov/777/Register-to-Vote-Update-Information"
 		},
 		{
-			"date": "July 17 - August 1, 2026",
-			"description": "",
+			"date": "October 14-29",
+			"description": "Early voting",
 			"link_title": "Early Voting Locations ➤",
 			"link": "https://www.blounttn.org/477/Early-Votin"
 		}
 	],
-	"election_day": "August 6, 2026"
+	"election_day": "November 3"
 }
